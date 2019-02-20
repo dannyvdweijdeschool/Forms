@@ -2,6 +2,7 @@
 	$name = "";
 	$email = "";
 	$nameErr = "";
+	$emailErr = "";
 	$form = false;
 	$errors = 0;
 
@@ -17,8 +18,6 @@
 		}elseif(!preg_match("/^[a-zA-Z ]*$/",$name)){
 		    $nameErr = "Je mag alleen letters en witruimte gebruiken.";
 		    $errors++;
-		}else{
-			$name = test_input($_POST["name"]);
 		}
 	}
 
@@ -31,7 +30,7 @@
 	        $errors++;
 	    }else{
 		    $email = test_input($_POST["e_mail"]);
-		}
+	}
 
 	if($errors == 0){
 		$form = true;

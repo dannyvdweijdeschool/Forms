@@ -1,0 +1,95 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "arial";
+}
+
+body{
+	background-color: black;
+}
+
+#header{
+	width: 80vw;
+	margin-left: 170px;
+	height: 30vh;
+	line-height: 30vh;
+	color: white;
+	font-size: 50px;
+}
+
+footer{
+	background-color: #555555;
+	width: 80vw;
+	margin: 0 auto;
+	height: 12vh;
+	line-height: 12vh;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+}
+
+nav{
+	width: 80vw;
+	margin: 0 auto;
+	height: 12vh;
+	line-height: 12vh;
+	background-color: darkred;
+}
+
+nav > ul > li{
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav > ul > li > a{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	transition: 0.5s;
+}
+
+form{
+	margin: 0 auto;
+	width: 80vw;
+}
+
+fieldset{
+	background-color: white;
+}
+
+fieldset > div{
+	width: 190px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.error{
+	color: red;
+}
+
+p{
+	width: 38vw;
+}
+
+input{
+	position: relative;
+	left: 40vw;
+	bottom: 2.4vh;
+	width: 20vw;
+}
+
+span{
+	position: relative;
+	left: 61vw;
+	bottom: 4.5vh;	
+}
+
+#submit{
+	width: 5vw;
+}
+
+#paniek{
+	margin-left: 1.2vw;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
