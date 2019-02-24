@@ -11,7 +11,7 @@
 			    $errors++;
 			}else{
 				$Awnsers[$key] = test_input($_POST[$key]);
-				if(!preg_match("/^[a-zA-Z ]*$/",$awnserValue)){
+				if(!preg_match("/^[a-zA-Z ]*$/",$_POST[$key])){
 				    $Err[$key] = "Je mag alleen letters en witruimte gebruiken.";
 				    $errors++;
 				}
@@ -46,7 +46,7 @@ function test_input($data) {
 			<?php foreach ($Questions as $key => $questionValue) { ?>
 			<div>
 				<p><?php echo $questionValue ?></p>
-				<input type="text" name="<?php echo $key ?>" value="<?php echo $Awnsers["Q1"];?>">
+				<input type="text" name="<?php echo $key ?>" value="<?php echo $Awnsers["$key"];?>">
 				<span class="error">* <?php echo $Err[$key];?></span>
 			</div>
 			<?php } ?>
@@ -55,13 +55,20 @@ function test_input($data) {
 			</div>
 		</fieldset>
 	</form>
-<?php } else{?>
-	<?php foreach ($Awnsers as $key => $value) { ?>
-		
-	<p><?php echo $value ?></p>
-
-	<?php } ?>
-<?php } 
+	<?php } else{?>
+		<div id="text" style="background-color: white; width: 75vw; margin: 0 auto; padding-left: 5vw;padding-top: 4vh; padding-bottom: 4vh;">
+			<h1>Er heerst paniek...</h1>
+			<p>Er heerst paniek in het koninkrijk <?php echo $Awnsers["Q3"] ?>. Koning <?php echo $Awnsers["Q6"] ?> is ten einde raad en als koning <?php echo $Awnsers["Q6"] ?>  ten einde raad is, dan roept hij zijn ten-einde-raadsheer <?php echo $Awnsers["Q2"] ?>.</p></br>
+			<p>"<?php echo $Awnsers["Q2"] ?>! het is een ramp! Het is een schande!"</p></br>
+			<p>"Sire!, Majesteit, Uwe Luidruchtigheid, wat is er aan de hand?"</p></br>
+			<p>"Mijn <?php echo $Awnsers["Q1"] ?> is verdwenen! Zo maar, zonder waarschuwing. En ik had net <?php echo $Awnsers["Q5"] ?> voor hem gekocht!"</p></br>
+			<p>"Majesteit, uw <?php echo $Awnsers["Q1"] ?> komt vanzelf weer terug?"</p></br>
+			<p>"Ja, da's leuk en aardig, maar hoe moet ik in de tussentijd <?php echo $Awnsers["Q8"] ?> leren?"</p></br>
+			<p>"Maar Sire, daar kunt u toch uw <?php echo $Awnsers["Q7"] ?> voor gebruiken."</p></br>
+			<p>"<?php echo $Awnsers["Q2"] ?>, je hebt helemaal gelijk! Wat zou ik doen als ik jou niet had."</p></br>
+			<p>"<?php echo $Awnsers["Q4"] ?>, Sire."</p>
+		</div>
+	<?php } 
 	include "../HTML/Footer.html" ?>
 </body>
 </html>
